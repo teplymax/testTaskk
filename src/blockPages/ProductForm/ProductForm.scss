@@ -1,0 +1,23 @@
+@import "../../scss/colors.scss";
+
+.productForm {
+  flex-direction: column;
+  flex: 1;
+  .input {
+    margin-bottom: 16px;
+  }
+  &__inputs {
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &__controls {
+    justify-content: space-between;
+    .button {
+      width: 45% !important;
+      &:nth-child(2) {
+        background-color: $red;
+      }
+    }
+  }
+}

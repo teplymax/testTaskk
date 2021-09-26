@@ -1,0 +1,85 @@
+@import "./repeat.scss";
+body {
+  overflow: hidden;
+  height: 100vh;
+  background-color: $mainBgColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+nav,
+section,
+header,
+div,
+ul,
+li,
+p,
+button,
+form,
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: fit-content;
+}
+
+section {
+  padding-top: 144px;
+  height: 100vh;
+  justify-content: center;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  @extend %centerFlex;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: unset;
+}
+
+nav,
+button,
+section,
+header,
+div:not(#root),
+ul,
+li,
+form {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  max-height: 100%;
+  max-width: 1110px;
+}
+
+@media (max-width: 1110px) {
+  .container {
+    flex: 1;
+  }
+  section {
+    padding-top: 40px;
+  }
+}

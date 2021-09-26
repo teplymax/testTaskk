@@ -1,0 +1,31 @@
+@import "./colors.scss";
+
+%absoluteCenter {
+  right: 50%;
+  transform: translateX(50%);
+}
+%centerFlex {
+  align-items: center;
+  justify-content: center;
+}
+
+%mainTitle {
+  font-family: Courgette;
+  font-size: 50px;
+  margin-bottom: 24px;
+  color: $orange;
+}
+
+%title {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 32px;
+  color: $black;
+}
+
+%text {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  color: $darkBlue;
+}

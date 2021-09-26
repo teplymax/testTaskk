@@ -1,0 +1,111 @@
+@import "../../scss/repeat.scss";
+
+.productDetails {
+  overflow-y: scroll;
+  .container {
+    align-items: start;
+    max-height: unset;
+    padding-bottom: 64px;
+  }
+
+  .button {
+    width: 200px;
+    margin-top: 64px;
+  }
+
+  .loader {
+    position: absolute;
+    top: 60px;
+  }
+
+  &__comment {
+    @extend %text;
+    color: #7e7e7e;
+    width: 200px;
+    flex-direction: column;
+    margin-right: 16px;
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__name {
+    @extend %mainTitle;
+  }
+
+  &__name,
+  &__image {
+    align-self: center;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-family: Poppins;
+    font-size: 24px;
+    line-height: 32px;
+    color: $darkBlue;
+    margin-bottom: 16px;
+
+    &:not(:nth-child(2)) {
+      margin-top: 64px;
+    }
+    &:nth-child(2) {
+      margin-top: 16px;
+    }
+  }
+  &__image {
+    @extend %centerFlex, %text;
+    background-color: rgba($color: #ffffff, $alpha: 0.3);
+    width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__text {
+    @extend %text;
+    color: #7e7e7e;
+    flex-direction: column;
+    p {
+      margin-bottom: 16px;
+      span {
+        @extend %title;
+        font-size: 16px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1110px) {
+  .productDetails {
+    .loader {
+      top: 100px;
+    }
+    .container {
+      padding: 0 16px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .productDetails {
+    &__title {
+      font-size: 16px;
+      line-height: 20px;
+      &:not(:nth-child(2)) {
+        margin-top: 48px;
+      }
+      &:nth-child(2) {
+        margin-top: 24px;
+      }
+    }
+    &__btn {
+      width: 100%;
+      margin-top: 48px;
+    }
+  }
+}
